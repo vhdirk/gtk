@@ -2,6 +2,8 @@
 // See the COPYRIGHT file at the top-level directory of this distribution.
 // Licensed under the MIT license, see the LICENSE file or <http://opensource.org/licenses/MIT>
 
+#![cfg_attr(feature = "cargo-clippy", allow(cast_ptr_alignment))]
+
 pub mod application;
 pub mod application_window;
 pub mod bin;
@@ -13,6 +15,7 @@ pub mod header_bar;
 pub mod stack;
 pub mod widget;
 pub mod window;
+pub mod cell_renderer;
 
 pub mod prelude {
     pub use super::application::GtkApplicationImpl;
@@ -26,6 +29,9 @@ pub mod prelude {
     pub use super::stack::StackImpl;
     pub use super::widget::WidgetImpl;
     pub use super::window::WindowImpl;
+    pub use super::cell_renderer::CellRendererImpl;
     pub use gio::subclass::prelude::*;
     pub use glib::subclass::prelude::*;
 }
+
+use self::prelude::*;

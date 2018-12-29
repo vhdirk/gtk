@@ -718,6 +718,7 @@ status = "generate"
 [[object]]
 name = "Gtk.CellRenderer"
 status = "generate"
+subclassing = true
     [[object.function]]
     name = "render"
         [[object.function.parameter]]
